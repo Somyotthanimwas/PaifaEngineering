@@ -15,7 +15,9 @@ function CompanyProfileNavLink() {
     const nav = document.querySelector('nav[aria-label="Main navigation"]');
     if (!nav || nav.querySelector('[data-company-profile-nav]')) return;
     const link = document.createElement("a");
-    link.href = "/company-profile";
+    link.href = "https://github.com/Somyotthanimwas/plaifa-engineering/blob/main/docs/CR-Company-profile-2026.pdf";
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
     link.className = "nav-link text-xl text-green-700 hover:text-green-500";
     link.textContent = "Company Profile";
     link.setAttribute("data-company-profile-nav", "true");
