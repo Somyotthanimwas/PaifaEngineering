@@ -169,7 +169,7 @@ export default function Home() {
             <img
               src="/assets/paifa-engineering-logo.png"
               alt="Plaifa Engineering"
-              className="h-12 w-auto object-contain transition-transform duration-200 group-hover:-translate-y-0.5"
+              className="h-16 w-auto object-contain transition-transform duration-200 group-hover:-translate-y-0.5"
             />
           </a>
 
