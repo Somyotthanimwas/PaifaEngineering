@@ -37,18 +37,16 @@ function ContactFormEmailBridge() {
       const details = String(data.get("details") || "").trim();
       if (!company || !name || !details) return;
 
-      event.preventDefault();
-      event.stopImmediatePropagation();
-
       try {
         const response = await fetch("https://formsubmit.co/ajax/plaifaeng@hotmail.com", {
           method: "POST",
           headers: {
-            "Content-Type": "application/json",
             Accept: "application/json",
           },
-          body: JSON.stringify({
+          body: new URLSearchParams({
             _subject: `งานใหม่จากเว็บไซต์ Plaifa Engineering - ${company}`,
+            _template: "table",
+            _captcha: "false",
             company,
             name,
             details,
@@ -64,13 +62,7 @@ function ContactFormEmailBridge() {
         const result = await response.json().catch(() => null);
         if (result && result.success === false) {
           console.error("Contact form email rejected:", result.message || result);
-          return;
         }
-
-        const submitButton = form.querySelector('button[type="submit"]') as HTMLButtonElement | null;
-        if (submitButton) submitButton.disabled = true;
-
-        form.dispatchEvent(new CustomEvent("plaifa-contact-success"));
       } catch (error) {
         console.error("Contact form email error:", error);
       }
