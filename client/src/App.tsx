@@ -37,35 +37,46 @@ function ContactFormEmailBridge() {
       const details = String(data.get("details") || "").trim();
       if (!company || !name || !details) return;
 
-      try {
-        const response = await fetch("https://formsubmit.co/ajax/plaifaeng@hotmail.com", {
-          method: "POST",
-          headers: {
-            Accept: "application/json",
-          },
-          body: new URLSearchParams({
-            _subject: `งานใหม่จากเว็บไซต์ Plaifa Engineering - ${company}`,
-            _template: "table",
-            _captcha: "false",
-            company,
-            name,
-            details,
-            _url: window.location.href,
-          }),
-        });
+      event.preventDefault();
+      event.stopImmediatePropagation();
 
-        if (!response.ok) {
-          console.error("Contact form email failed:", response.status);
-          return;
-        }
+      const target = `plaifa_contact_${Date.now()}`;
+      const iframe = document.createElement("iframe");
+      iframe.name = target;
+      iframe.style.display = "none";
+      document.body.appendChild(iframe);
 
-        const result = await response.json().catch(() => null);
-        if (result && result.success === false) {
-          console.error("Contact form email rejected:", result.message || result);
-        }
-      } catch (error) {
-        console.error("Contact form email error:", error);
-      }
+      const submitForm = document.createElement("form");
+      submitForm.method = "POST";
+      submitForm.action = "https://formsubmit.co/plaifaeng@hotmail.com";
+      submitForm.target = target;
+      submitForm.style.display = "none";
+
+      const fields: Record<string, string> = {
+        _subject: `งานใหม่จากเว็บไซต์ Plaifa Engineering - ${company}`,
+        _template: "table",
+        _captcha: "false",
+        company,
+        name,
+        details,
+        _url: window.location.href,
+      };
+
+      Object.entries(fields).forEach(([key, value]) => {
+        const input = document.createElement("input");
+        input.type = "hidden";
+        input.name = key;
+        input.value = value;
+        submitForm.appendChild(input);
+      });
+
+      document.body.appendChild(submitForm);
+      submitForm.submit();
+
+      window.setTimeout(() => {
+        iframe.remove();
+        submitForm.remove();
+      }, 10000);
     };
 
     document.addEventListener("submit", handleSubmit, true);
