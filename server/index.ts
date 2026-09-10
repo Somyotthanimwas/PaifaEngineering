@@ -35,8 +35,13 @@ async function startServer() {
     res.sendFile(pdfPath);
   });
 
-  // Handle client-side routing - serve index.html for all routes
-  app.get("*", (_req, res) => {
+  // Explicit SPA entry route for direct navigation to Company Profile.
+  app.get("/company-profile", (_req, res) => {
+    res.sendFile(path.join(staticPath, "index.html"));
+  });
+
+  // Handle client-side routing for all other application routes.
+  app.use((_req, res) => {
     res.sendFile(path.join(staticPath, "index.html"));
   });
 
