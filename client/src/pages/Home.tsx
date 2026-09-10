@@ -426,7 +426,7 @@ export default function Home() {
             <div className="flex flex-col justify-between gap-7 md:flex-row md:items-end">
               <div>
                 <p className="eyebrow">OUR SERVICES</p>
-                <h2 className="section-title mt-5 text-[24px] leading-tight">
+                <h2 className="section-title mt-5 text-[36px] leading-tight">
                   บริการที่วางใจได้
                   <br />
                   <span className="text-[#f47a27]">ในทุกขั้นตอน</span>
