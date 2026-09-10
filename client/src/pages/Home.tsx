@@ -555,7 +555,7 @@ export default function Home() {
             <div>
               <p className="eyebrow">HOW WE WORK</p>
 
-              <h2 className="section-title mt-5">
+              <h2 className="section-title mt-5 text-[24px] leading-tight">
                 ทำงานอย่างเป็นระบบ
                 <br />
                 <span className="text-[#f47a27]">ตั้งแต่ต้นจนจบ</span>
