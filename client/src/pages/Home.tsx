@@ -177,16 +177,16 @@ export default function Home() {
             className="hidden items-center gap-8 lg:flex"
             aria-label="Main navigation"
           >
-            <a className="nav-link text-xl text-green-700 hover:text-green-500" href="#about">
+            <a className="nav-link text-2xl text-green-700 hover:text-green-500" href="#about">
               เกี่ยวกับเรา
             </a>
-            <a className="nav-link text-lg text-green-700 hover:text-green-500" href="#services">
+            <a className="nav-link text-2xl text-green-700 hover:text-green-500" href="#services">
               บริการ
             </a>
-            <a className="nav-link text-lg text-green-700 hover:text-green-500" href="#projects">
+            <a className="nav-link text-2xl text-green-700 hover:text-green-500" href="#projects">
               ผลงาน
             </a>
-            <a className="nav-link text-lg text-green-700 hover:text-green-500" href="#process">
+            <a className="nav-link text-2xl text-green-700 hover:text-green-500" href="#process">
               แนวทางทำงาน
             </a>
           </nav>
