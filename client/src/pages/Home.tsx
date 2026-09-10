@@ -553,9 +553,9 @@ export default function Home() {
         <section id="process" className="bg-[#f3f5f6] py-24 lg:py-32">
           <div className="container grid gap-14 lg:grid-cols-[0.8fr_1.2fr] lg:gap-24">
             <div>
-              <p className="eyebrow text-[28px]">HOW WE WORK</p>
+              <p className="eyebrow text-[24px]">HOW WE WORK</p>
 
-              <h2 className="section-title mt-5 text-[30px] leading-tight">
+              <h2 className="section-title mt-5 text-[36px] leading-tight">
                 ทำงานอย่างเป็นระบบ
                 <br />
                 <span className="text-[#f47a27]">ตั้งแต่ต้นจนจบ</span>
