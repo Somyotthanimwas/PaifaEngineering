@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/NotFound";
@@ -7,6 +8,26 @@ import { ThemeProvider } from "./contexts/ThemeContext";
 import CompanyProfile from "./pages/CompanyProfile";
 import Home from "./pages/Home";
 
+function CompanyProfileNavLink() {
+  useEffect(() => {
+    if (window.location.pathname !== "/") return;
+
+    const nav = document.querySelector('nav[aria-label="Main navigation"]');
+    if (!nav || nav.querySelector('[data-company-profile-nav]')) return;
+
+    const link = document.createElement("a");
+    link.href = "/company-profile";
+    link.className = "nav-link";
+    link.textContent = "Company Profile";
+    link.setAttribute("data-company-profile-nav", "true");
+
+    nav.insertBefore(link, nav.children[1] || null);
+
+    return () => link.remove();
+  }, []);
+
+  return null;
+}
 
 function Router() {
   return (
@@ -34,6 +55,7 @@ function App() {
       >
         <TooltipProvider>
           <Toaster />
+          <CompanyProfileNavLink />
           <Router />
         </TooltipProvider>
       </ThemeProvider>
