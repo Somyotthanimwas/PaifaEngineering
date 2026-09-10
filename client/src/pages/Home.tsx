@@ -177,7 +177,7 @@ export default function Home() {
             className="hidden items-center gap-8 lg:flex"
             aria-label="Main navigation"
           >
-            <a className="nav-link" href="#about">
+            <a className="nav-link text-green-600" href="#about">
               เกี่ยวกับเรา
             </a>
             <a className="nav-link" href="#services">
