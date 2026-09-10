@@ -24,7 +24,14 @@ export default function CompanyProfile() {
       <main>
         <section className="bg-[#10202d] py-20 text-white lg:py-28">
           <div className="container">
-            <p className="text-[11px] font-bold tracking-[0.24em] text-[#ff9a55]">COMPANY PROFILE</p>
+            <a
+              href="https://github.com/Somyotthanimwas/plaifa-engineering/blob/main/docs/CR-Company-profile-2026.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block text-[11px] font-bold tracking-[0.24em] text-[#ff9a55] transition hover:text-white hover:underline"
+            >
+              COMPANY PROFILE
+            </a>
             <h1 className="mt-5 max-w-4xl text-4xl font-bold leading-tight tracking-tight sm:text-6xl">
               บริษัท ปลายฟ้า เอ็นจิเนียริ่ง จำกัด
             </h1>
