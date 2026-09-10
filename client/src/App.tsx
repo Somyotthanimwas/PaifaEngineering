@@ -27,7 +27,7 @@ function CompanyProfileNavLink() {
 
 function ContactFormEmailBridge() {
   useEffect(() => {
-    const handleSubmit = async (event: Event) => {
+    const handleSubmit = (event: Event) => {
       const form = event.target as HTMLFormElement | null;
       if (!form || !form.querySelector('input[name="company"]')) return;
 
@@ -36,9 +36,6 @@ function ContactFormEmailBridge() {
       const name = String(data.get("name") || "").trim();
       const details = String(data.get("details") || "").trim();
       if (!company || !name || !details) return;
-
-      event.preventDefault();
-      event.stopImmediatePropagation();
 
       const target = `plaifa_contact_${Date.now()}`;
       const iframe = document.createElement("iframe");
