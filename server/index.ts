@@ -18,6 +18,14 @@ async function startServer() {
 
   app.use(express.static(staticPath));
 
+  // Serve the company profile PDF inline so browsers open it instead of downloading it.
+  app.get("/docs/CR-Company-profile-2026.pdf", (_req, res) => {
+    const pdfPath = path.resolve(process.cwd(), "docs", "CR-Company-profile-2026.pdf");
+    res.type("application/pdf");
+    res.setHeader("Content-Disposition", "inline; filename=CR-Company-profile-2026.pdf");
+    res.sendFile(pdfPath);
+  });
+
   // Handle client-side routing - serve index.html for all routes
   app.get("*", (_req, res) => {
     res.sendFile(path.join(staticPath, "index.html"));
