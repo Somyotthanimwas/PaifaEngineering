@@ -30,15 +30,23 @@ function ContactFormEmailBridge() {
     const handleSubmit = async (event: Event) => {
       const form = event.target as HTMLFormElement | null;
       if (!form || !form.querySelector('input[name="company"]')) return;
+
       const data = new FormData(form);
       const company = String(data.get("company") || "").trim();
       const name = String(data.get("name") || "").trim();
       const details = String(data.get("details") || "").trim();
       if (!company || !name || !details) return;
+
+      event.preventDefault();
+      event.stopImmediatePropagation();
+
       try {
         const response = await fetch("https://formsubmit.co/ajax/plaifaeng@hotmail.com", {
           method: "POST",
-          headers: { "Content-Type": "application/json", Accept: "application/json" },
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
           body: JSON.stringify({
             _subject: `งานใหม่จากเว็บไซต์ Plaifa Engineering - ${company}`,
             company,
@@ -47,11 +55,27 @@ function ContactFormEmailBridge() {
             _url: window.location.href,
           }),
         });
-        if (!response.ok) console.error("Contact form email failed:", response.status);
+
+        if (!response.ok) {
+          console.error("Contact form email failed:", response.status);
+          return;
+        }
+
+        const result = await response.json().catch(() => null);
+        if (result && result.success === false) {
+          console.error("Contact form email rejected:", result.message || result);
+          return;
+        }
+
+        const submitButton = form.querySelector('button[type="submit"]') as HTMLButtonElement | null;
+        if (submitButton) submitButton.disabled = true;
+
+        form.dispatchEvent(new CustomEvent("plaifa-contact-success"));
       } catch (error) {
         console.error("Contact form email error:", error);
       }
     };
+
     document.addEventListener("submit", handleSubmit, true);
     return () => document.removeEventListener("submit", handleSubmit, true);
   }, []);
