@@ -262,7 +262,7 @@ export default function Home() {
                 ELECTRICAL • ENGINEERING • PROJECT
               </div>
 
-              <h1 className="display max-w-[760px] text-[clamp(1.4rem,3.5vw,3.25rem)] font-bold leading-[0.98] tracking-[-0.05em]">
+              <h1 className="display max-w-[760px] text-[clamp(1.1rem,2.5vw,2rem)] font-bold leading-[0.98] tracking-[-0.05em]">
                 ระบบที่ดี
                 <br />
                 <span className="text-[#f47a27]">เริ่มจาก</span>ความเข้าใจ
