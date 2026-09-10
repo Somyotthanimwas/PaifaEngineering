@@ -17,7 +17,7 @@ function CompanyProfileNavLink() {
 
     const link = document.createElement("a");
     link.href = "/company-profile";
-    link.className = "nav-link";
+    link.className = "nav-link text-xl text-green-700 hover:text-green-500";
     link.textContent = "Company Profile";
     link.setAttribute("data-company-profile-nav", "true");
 
