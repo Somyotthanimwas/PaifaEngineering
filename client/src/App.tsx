@@ -29,6 +29,50 @@ function CompanyProfileNavLink() {
   return null;
 }
 
+function ContactFormEmailBridge() {
+  useEffect(() => {
+    const handleSubmit = async (event: Event) => {
+      const form = event.target as HTMLFormElement | null;
+      if (!form || !form.querySelector('input[name="company"]')) return;
+
+      const data = new FormData(form);
+      const company = String(data.get("company") || "").trim();
+      const name = String(data.get("name") || "").trim();
+      const details = String(data.get("details") || "").trim();
+
+      if (!company || !name || !details) return;
+
+      try {
+        const response = await fetch("https://formsubmit.co/ajax/plaifaeng@hotmail.com", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify({
+            _subject: `งานใหม่จากเว็บไซต์ Plaifa Engineering - ${company}`,
+            company,
+            name,
+            details,
+            _url: window.location.href,
+          }),
+        });
+
+        if (!response.ok) {
+          console.error("Contact form email failed:", response.status);
+        }
+      } catch (error) {
+        console.error("Contact form email error:", error);
+      }
+    };
+
+    document.addEventListener("submit", handleSubmit, true);
+    return () => document.removeEventListener("submit", handleSubmit, true);
+  }, []);
+
+  return null;
+}
+
 function Router() {
   return (
     <Switch>
@@ -56,6 +100,7 @@ function App() {
         <TooltipProvider>
           <Toaster />
           <CompanyProfileNavLink />
+          <ContactFormEmailBridge />
           <Router />
         </TooltipProvider>
       </ThemeProvider>
