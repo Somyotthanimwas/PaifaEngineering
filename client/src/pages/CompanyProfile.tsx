@@ -1,4 +1,4 @@
-import { ArrowLeft, ArrowUpRight, Building2, CheckCircle2, Mail, MapPin, Phone, ShieldCheck } from "lucide-react";
+import { ArrowLeft, ArrowUpRight, Building2, CheckCircle2, Mail, MapPin, Phone } from "lucide-react";
 
 export default function CompanyProfile() {
   return (
@@ -25,7 +25,7 @@ export default function CompanyProfile() {
         <section className="bg-[#10202d] py-20 text-white lg:py-28">
           <div className="container">
             <a
-              href="https://raw.githubusercontent.com/Somyotthanimwas/plaifa-engineering/main/docs/CR-Company-profile-2026.pdf"
+              href="/docs/CR-Company-profile-2026.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block text-[11px] font-bold tracking-[0.24em] text-[#ff9a55] transition hover:text-white hover:underline"
