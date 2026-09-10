@@ -378,7 +378,7 @@ export default function Home() {
             <div>
               <p className="eyebrow">ABOUT PLAIFA ENGINEERING</p>
 
-              <h2 className="section-title mt-5 max-w-[640px]">
+              <h2 className="section-title mt-5 max-w-[640px] text-[40px] leading-tight">
                 Engineering partner
                 <br />
                 <span className="text-[#f47a27]">สำหรับงานของคุณ</span>
