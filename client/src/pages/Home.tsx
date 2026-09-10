@@ -609,7 +609,7 @@ export default function Home() {
                 CONTACT PLAIFA ENGINEERING
               </p>
 
-              <h2 className="section-title mt-5 max-w-[670px] text-[#10202d]">
+              <h2 className="section-title mt-5 max-w-[670px] text-[38px] leading-tight text-[#10202d]">
                 มีงานระบบไฟฟ้า
                 <br />
                 หรืองานวิศวกรรม?
