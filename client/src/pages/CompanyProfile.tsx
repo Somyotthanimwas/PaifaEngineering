@@ -18,7 +18,7 @@ export default function CompanyProfile() {
         <section className="bg-[#10202d] py-20 text-white lg:py-28">
           <div className="container">
             <a
-              href="https://github.com/Somyotthanimwas/plaifa-engineering/blob/main/docs/Company%20profile.pdf"
+              href="/company-profile.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block text-[11px] font-bold tracking-[0.24em] text-[#ff9a55] transition hover:text-white hover:underline"
