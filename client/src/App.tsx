@@ -7,25 +7,21 @@ import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import CompanyProfile from "./pages/CompanyProfile";
 import Home from "./pages/Home";
+import Projects from "./pages/Projects";
 
 function CompanyProfileNavLink() {
   useEffect(() => {
     if (window.location.pathname !== "/") return;
-
     const nav = document.querySelector('nav[aria-label="Main navigation"]');
     if (!nav || nav.querySelector('[data-company-profile-nav]')) return;
-
     const link = document.createElement("a");
     link.href = "/company-profile";
     link.className = "nav-link";
     link.textContent = "Company Profile";
     link.setAttribute("data-company-profile-nav", "true");
-
     nav.insertBefore(link, nav.children[1] || null);
-
     return () => link.remove();
   }, []);
-
   return null;
 }
 
@@ -34,21 +30,15 @@ function ContactFormEmailBridge() {
     const handleSubmit = async (event: Event) => {
       const form = event.target as HTMLFormElement | null;
       if (!form || !form.querySelector('input[name="company"]')) return;
-
       const data = new FormData(form);
       const company = String(data.get("company") || "").trim();
       const name = String(data.get("name") || "").trim();
       const details = String(data.get("details") || "").trim();
-
       if (!company || !name || !details) return;
-
       try {
         const response = await fetch("https://formsubmit.co/ajax/plaifaeng@hotmail.com", {
           method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            Accept: "application/json",
-          },
+          headers: { "Content-Type": "application/json", Accept: "application/json" },
           body: JSON.stringify({
             _subject: `งานใหม่จากเว็บไซต์ Plaifa Engineering - ${company}`,
             company,
@@ -57,19 +47,14 @@ function ContactFormEmailBridge() {
             _url: window.location.href,
           }),
         });
-
-        if (!response.ok) {
-          console.error("Contact form email failed:", response.status);
-        }
+        if (!response.ok) console.error("Contact form email failed:", response.status);
       } catch (error) {
         console.error("Contact form email error:", error);
       }
     };
-
     document.addEventListener("submit", handleSubmit, true);
     return () => document.removeEventListener("submit", handleSubmit, true);
   }, []);
-
   return null;
 }
 
@@ -78,25 +63,17 @@ function Router() {
     <Switch>
       <Route path={"/"} component={Home} />
       <Route path={"/company-profile"} component={CompanyProfile} />
+      <Route path={"/projects"} component={Projects} />
       <Route path={"/404"} component={NotFound} />
-      {/* Final fallback route */}
       <Route component={NotFound} />
     </Switch>
   );
 }
 
-// NOTE: About Theme
-// - First choose a default theme according to your design style (dark or light bg), than change color palette in index.css
-//   to keep consistent foreground/background color across components
-// - If you want to make theme switchable, pass `switchable` ThemeProvider and use `useTheme` hook
-
 function App() {
   return (
     <ErrorBoundary>
-      <ThemeProvider
-        defaultTheme="light"
-        // switchable
-      >
+      <ThemeProvider defaultTheme="light">
         <TooltipProvider>
           <Toaster />
           <CompanyProfileNavLink />
