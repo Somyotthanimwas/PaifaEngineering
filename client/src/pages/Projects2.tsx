@@ -39,6 +39,8 @@ const electricalImages = [
     title: "ระบบกราวด์และสถานีไฟฟ้า",
     description: "จัดทำระบบกราวด์และการเชื่อมต่อสำหรับหม้อแปลงและอุปกรณ์ไฟฟ้า",
   },
+  "/assets/plaifa-grounding-system.jpg",
+
 ];
 
 export default function Projects2() {
