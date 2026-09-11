@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/NotFound";
@@ -8,6 +8,7 @@ import { ThemeProvider } from "./contexts/ThemeContext";
 import CompanyProfile from "./pages/CompanyProfile";
 import Home from "./pages/Home";
 import Projects from "./pages/Projects";
+import Projects2 from "./pages/Projects2";
 
 function CompanyProfileNavLink() {
   useEffect(() => {
@@ -74,10 +75,27 @@ function ContactFormEmailBridge() {
   return null;
 }
 
+function HashAwareHome() {
+  const [showProjects2, setShowProjects2] = useState(
+    () => window.location.hash === "#projects2"
+  );
+
+  useEffect(() => {
+    const onHashChange = () => {
+      setShowProjects2(window.location.hash === "#projects2");
+    };
+
+    window.addEventListener("hashchange", onHashChange);
+    return () => window.removeEventListener("hashchange", onHashChange);
+  }, []);
+
+  return showProjects2 ? <Projects2 /> : <Home />;
+}
+
 function Router() {
   return (
     <Switch>
-      <Route path={"/"} component={Home} />
+      <Route path={"/"} component={HashAwareHome} />
       <Route path={"/company-profile"} component={CompanyProfile} />
       <Route path={"/projects"} component={Projects} />
       <Route path={"/404"} component={NotFound} />
