@@ -189,6 +189,14 @@ export default function Home() {
             <a className="nav-link text-2xl text-green-700 hover:text-green-500" href="#process">
               แนวทางทำงาน
             </a>
+            <a
+              className="nav-link text-2xl text-green-700 hover:text-green-500"
+              href="https://plaifaengineering.onrender.com/#projects"
+              target="_blank"
+              rel="noreferrer"
+            >
+              เว็บไซต์ผลงาน
+            </a>
           </nav>
 
           <a
@@ -239,6 +247,16 @@ export default function Home() {
                   );
                 }
               )}
+              <a
+                href="https://plaifaengineering.onrender.com/#projects"
+                target="_blank"
+                rel="noreferrer"
+                onClick={closeMenu}
+                className="flex items-center justify-between border-b border-slate-200 pb-3 text-sm font-bold text-[#10202d]"
+              >
+                เว็บไซต์ผลงาน
+                <ChevronRight size={16} className="text-[#f47a27]" />
+              </a>
             </nav>
           </div>
         )}
