@@ -184,11 +184,20 @@ export default function Home() {
               บริการ
             </a>
             <a className="nav-link text-2xl text-green-700 hover:text-green-500" href="#projects">
-              ผลงาน
+              งานที่เราดูแล
             </a>
             <a className="nav-link text-2xl text-green-700 hover:text-green-500" href="#process">
               แนวทางทำงาน
             </a>
+            <a
+              className="nav-link text-2xl text-green-700 hover:text-green-500"
+              href="https://plaifaengineering.onrender.com/#projects2"
+              target="_blank"
+              rel="noreferrer"
+            >
+              ผลงาน
+            </a>
+
           </nav>
 
           <a
