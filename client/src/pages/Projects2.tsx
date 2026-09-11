@@ -41,11 +41,30 @@ const electricalImages = [
   },
   {
     image: "/assets/a.jpg",
-     title: "'งานติดตั้ง",
   },
   {
     image: "/assets/b.jpg",
-     title: "'งานติดตั้ง",
+  },
+  {
+    image: "/assets/1.jpg",
+  },
+  {
+    image: "/assets/2.jpg",
+  },
+  {
+    image: "/assets/3.jpg",
+  },
+  {
+    image: "/assets/4.jpg",
+  },
+  {
+    image: "/assets/5.jpg",
+  },
+  {
+    image: "/assets/6.jpg",
+  },
+  {
+    image: "/assets/7.jpg",
   },
 ];
 
