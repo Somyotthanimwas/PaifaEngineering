@@ -103,58 +103,6 @@ const projects = [
     image: images.technician,
     span: "md:col-span-7",
   },
-  {
-    code: "SWG",
-    title: "ตรวจสอบตู้สวิตช์บอร์ด",
-    description:
-      "ตรวจสอบตู้ไฟฟ้าแรงต่ำและอุปกรณ์ป้องกัน พร้อมเก็บรายละเอียดงานให้พร้อมใช้งาน",
-    image: "/assets/plaifa-switchboard-inspection.jpg",
-    span: "md:col-span-7",
-  },
-  {
-    code: "CAB",
-    title: "ติดตั้งรางเคเบิลและสายไฟ",
-    description:
-      "จัดวางรางเคเบิลและเดินสายไฟในอาคารอุตสาหกรรมอย่างเป็นระเบียบและปลอดภัย",
-    image: "/assets/plaifa-cable-installation.jpg",
-    span: "md:col-span-5",
-  },
-  {
-    code: "CTL",
-    title: "ทดสอบตู้ควบคุมไฟฟ้า",
-    description:
-      "ทดสอบวงจรและตรวจวัดค่าระบบภายในตู้ควบคุม เพื่อความมั่นใจก่อนส่งมอบงาน",
-    image: "/assets/plaifa-control-panel.jpg",
-    span: "md:col-span-5",
-  },
-  {
-    code: "GND",
-    title: "ระบบกราวด์และสถานีไฟฟ้า",
-    description:
-      "ติดตั้งและจัดระเบียบระบบกราวด์สำหรับหม้อแปลงและอุปกรณ์ไฟฟ้าภายนอกอาคาร",
-    image: "/assets/plaifa-grounding-system.jpg",
-    span: "md:col-span-7",
-  },
-];
-
-const electricalGallery = [
-  ...projects.map(({ title, image }) => ({ title, image })),
-  {
-    title: "ตรวจสอบตู้สวิตช์บอร์ด",
-    image: "/assets/plaifa-switchboard-inspection.jpg",
-  },
-  {
-    title: "ติดตั้งรางเคเบิลและสายไฟ",
-    image: "/assets/plaifa-cable-installation.jpg",
-  },
-  {
-    title: "ทดสอบตู้ควบคุมไฟฟ้า",
-    image: "/assets/plaifa-control-panel.jpg",
-  },
-  {
-    title: "ระบบกราวด์และสถานีไฟฟ้า",
-    image: "/assets/plaifa-grounding-system.jpg",
-  },
 ];
 
 const process = [
@@ -236,19 +184,20 @@ export default function Home() {
               บริการ
             </a>
             <a className="nav-link text-2xl text-green-700 hover:text-green-500" href="#projects">
-              ผลงาน
+              งานที่เราดูแล
             </a>
             <a className="nav-link text-2xl text-green-700 hover:text-green-500" href="#process">
               แนวทางทำงาน
             </a>
             <a
               className="nav-link text-2xl text-green-700 hover:text-green-500"
-              href="https://plaifaengineering.onrender.com/#projects"
+              href="https://plaifaengineering.onrender.com/#projects2"
               target="_blank"
               rel="noreferrer"
             >
-              เว็บไซต์ผลงาน
+              ผลงาน
             </a>
+
           </nav>
 
           <a
@@ -299,16 +248,6 @@ export default function Home() {
                   );
                 }
               )}
-              <a
-                href="https://plaifaengineering.onrender.com/#projects"
-                target="_blank"
-                rel="noreferrer"
-                onClick={closeMenu}
-                className="flex items-center justify-between border-b border-slate-200 pb-3 text-sm font-bold text-[#10202d]"
-              >
-                เว็บไซต์ผลงาน
-                <ChevronRight size={16} className="text-[#f47a27]" />
-              </a>
             </nav>
           </div>
         )}
@@ -320,8 +259,6 @@ export default function Home() {
             src={images.hero}
             alt="ทีมวิศวกรตรวจสอบตู้ไฟฟ้าในโรงงาน"
             className="absolute inset-0 -z-20 size-full object-cover object-center"
-            fetchPriority="high"
-            decoding="async"
           />
 
           <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(5,18,30,0.98)_0%,rgba(6,22,34,0.87)_38%,rgba(6,21,32,0.28)_72%,rgba(6,21,32,0.42)_100%)]" />
@@ -426,7 +363,6 @@ export default function Home() {
                   alt="ช่างวิศวกรกำลังตรวจสอบแผงควบคุมไฟฟ้า"
                   className="aspect-[4/4.7] w-full object-cover"
                   loading="lazy"
-                  decoding="async"
                 />
 
                 <div className="absolute inset-x-5 bottom-5 flex items-center justify-between rounded-2xl border border-white/15 bg-[#10202d]/82 p-4 text-white backdrop-blur-md">
@@ -593,7 +529,6 @@ export default function Home() {
                       alt={title}
                       className="absolute inset-0 size-full object-cover transition duration-700 group-hover:scale-105"
                       loading="lazy"
-                      decoding="async"
                     />
 
                     <div className="absolute inset-0 bg-gradient-to-t from-[#06131e] via-[#06131e]/30 to-transparent" />
@@ -620,40 +555,6 @@ export default function Home() {
                   </article>
                 )
               )}
-            </div>
-          </div>
-        </section>
-
-        <section id="projects2" className="bg-[#f3f5f6] py-24 lg:py-32">
-          <div className="container">
-            <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
-              <div>
-                <p className="eyebrow">ELECTRICAL WORKS GALLERY</p>
-                <h2 className="section-title mt-5 text-[42px] leading-tight">
-                  รูปผลงาน
-                  <br />
-                  <span className="text-[#f47a27]">งานไฟฟ้าโดยเฉพาะ</span>
-                </h2>
-              </div>
-              <p className="max-w-[390px] text-[15px] leading-7 text-[#68757d]">
-                รวมภาพงานติดตั้ง ตรวจสอบ และดูแลระบบไฟฟ้าของ Plaifa Engineering
-              </p>
-            </div>
-
-            <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-              {electricalGallery.map(({ title, image }) => (
-                <figure
-                  key={image}
-                  className="group overflow-hidden rounded-[24px] bg-[#10202d] shadow-[0_18px_50px_rgba(15,31,45,0.12)]"
-                >
-                  <img
-                    src={image}
-                    alt={title}
-                    className="aspect-[4/3] w-full object-cover transition duration-700 group-hover:scale-105"
-                    loading="lazy"
-                  />
-                </figure>
-              ))}
             </div>
           </div>
         </section>
