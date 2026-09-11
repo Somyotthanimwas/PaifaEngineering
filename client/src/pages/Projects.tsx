@@ -73,6 +73,14 @@ export default function Projects() {
               ตัวอย่างงานระบบไฟฟ้าและงานสนับสนุนทางวิศวกรรมของ Plaifa Engineering
               โดยเน้นคุณภาพ ความปลอดภัย และความเรียบร้อยของงานหน้างาน
             </p>
+            <a
+              href="https://chatgpt.com/backend-api/estuary/content?id=file_00000000598481f58e902bc8ea0b4121&ts=496971&p=fs&cid=1&sig=2e8cd895f2ae462de64c714f00bcd4e347420e7771baff26a4e8826e867f76ec&v=0"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-8 inline-flex items-center gap-2 rounded-full bg-[#f47a27] px-6 py-3.5 text-sm font-bold text-[#10202d] transition hover:-translate-y-0.5 hover:bg-[#ff964e]"
+            >
+              เปิดดูผลงานเพิ่มเติม <ArrowUpRight size={17} />
+            </a>
           </div>
         </section>
 
