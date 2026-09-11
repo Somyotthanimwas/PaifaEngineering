@@ -33,6 +33,38 @@ const projects = [
       "ตรวจสอบหน้างาน วิเคราะห์ปัญหา งานเข้าหัวสาย ต่อเข้าตู้ไฟ และปรับปรุงรายละเอียดของระบบ",
     image: "/assets/plaifa-technician.jpg",
   },
+  {
+    code: "SWG",
+    title: "ตรวจสอบตู้สวิตช์บอร์ด",
+    subtitle: "SWITCHBOARD INSPECTION",
+    description:
+      "ตรวจสอบตู้ไฟฟ้าแรงต่ำและอุปกรณ์ป้องกัน พร้อมเก็บรายละเอียดงานให้พร้อมใช้งาน",
+    image: "/assets/plaifa-switchboard-inspection.jpg",
+  },
+  {
+    code: "CAB",
+    title: "ติดตั้งรางเคเบิลและสายไฟ",
+    subtitle: "CABLE INSTALLATION",
+    description:
+      "จัดวางรางเคเบิลและเดินสายไฟในอาคารอุตสาหกรรมอย่างเป็นระเบียบและปลอดภัย",
+    image: "/assets/plaifa-cable-installation.jpg",
+  },
+  {
+    code: "CTL",
+    title: "ทดสอบตู้ควบคุมไฟฟ้า",
+    subtitle: "CONTROL PANEL TESTING",
+    description:
+      "ทดสอบวงจรและตรวจวัดค่าระบบภายในตู้ควบคุม เพื่อความมั่นใจก่อนส่งมอบงาน",
+    image: "/assets/plaifa-control-panel.jpg",
+  },
+  {
+    code: "GND",
+    title: "ระบบกราวด์และสถานีไฟฟ้า",
+    subtitle: "GROUNDING SYSTEM",
+    description:
+      "ติดตั้งและจัดระเบียบระบบกราวด์สำหรับหม้อแปลงและอุปกรณ์ไฟฟ้าภายนอกอาคาร",
+    image: "/assets/plaifa-grounding-system.jpg",
+  },
 ];
 
 export default function Projects() {

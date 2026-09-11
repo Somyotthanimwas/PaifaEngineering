@@ -103,6 +103,38 @@ const projects = [
     image: images.technician,
     span: "md:col-span-7",
   },
+  {
+    code: "SWG",
+    title: "ตรวจสอบตู้สวิตช์บอร์ด",
+    description:
+      "ตรวจสอบตู้ไฟฟ้าแรงต่ำและอุปกรณ์ป้องกัน พร้อมเก็บรายละเอียดงานให้พร้อมใช้งาน",
+    image: "/assets/plaifa-switchboard-inspection.jpg",
+    span: "md:col-span-7",
+  },
+  {
+    code: "CAB",
+    title: "ติดตั้งรางเคเบิลและสายไฟ",
+    description:
+      "จัดวางรางเคเบิลและเดินสายไฟในอาคารอุตสาหกรรมอย่างเป็นระเบียบและปลอดภัย",
+    image: "/assets/plaifa-cable-installation.jpg",
+    span: "md:col-span-5",
+  },
+  {
+    code: "CTL",
+    title: "ทดสอบตู้ควบคุมไฟฟ้า",
+    description:
+      "ทดสอบวงจรและตรวจวัดค่าระบบภายในตู้ควบคุม เพื่อความมั่นใจก่อนส่งมอบงาน",
+    image: "/assets/plaifa-control-panel.jpg",
+    span: "md:col-span-5",
+  },
+  {
+    code: "GND",
+    title: "ระบบกราวด์และสถานีไฟฟ้า",
+    description:
+      "ติดตั้งและจัดระเบียบระบบกราวด์สำหรับหม้อแปลงและอุปกรณ์ไฟฟ้าภายนอกอาคาร",
+    image: "/assets/plaifa-grounding-system.jpg",
+    span: "md:col-span-7",
+  },
 ];
 
 const process = [
