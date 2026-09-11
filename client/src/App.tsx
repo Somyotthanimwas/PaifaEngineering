@@ -7,6 +7,7 @@ import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import CompanyProfile from "./pages/CompanyProfile";
 import Home from "./pages/Home";
+import Projects from "./pages/Projects";
 
 function CompanyProfileNavLink() {
   useEffect(() => {
@@ -78,6 +79,7 @@ function Router() {
     <Switch>
       <Route path={"/"} component={Home} />
       <Route path={"/company-profile"} component={CompanyProfile} />
+      <Route path={"/projects"} component={Projects} />
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />
