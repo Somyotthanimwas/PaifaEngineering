@@ -223,7 +223,7 @@ export default function Home() {
             </a>
             <a
               className="nav-link text-2xl text-green-700 hover:text-green-500"
-              href="https://plaifaengineering.onrender.com/#projects"
+              href="https://plaifaengineering.onrender.com/#projects2"
               target="_blank"
               rel="noreferrer"
             >
