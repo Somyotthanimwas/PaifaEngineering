@@ -7,6 +7,15 @@ const electricalImages = [
   "/assets/plaifa-cable-installation.jpg",
   "/assets/plaifa-control-panel.jpg",
   "/assets/plaifa-grounding-system.jpg",
+  "/assets/1.jpg",
+  "/assets/2.jpg",
+  "/assets/3.jpg",
+  "/assets/4.jpg",
+  "/assets/5.jpg",
+  "/assets/6.jpg",
+  "/assets/7.jpg",
+  "/assets/a.jpg",
+  "/assets/b.jpg",
 ];
 
 export default function Projects2() {
