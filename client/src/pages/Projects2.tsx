@@ -40,7 +40,7 @@ const electricalImages = [
     description: "จัดทำระบบกราวด์และการเชื่อมต่อสำหรับหม้อแปลงและอุปกรณ์ไฟฟ้า",
   },
   {
-     image "/assets/plaifa-grounding-system.jpg",
+    image "/assets/plaifa-grounding-system.jpg",
   },
 ];
 
