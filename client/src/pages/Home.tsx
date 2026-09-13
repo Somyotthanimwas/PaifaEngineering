@@ -204,7 +204,7 @@ export default function Home() {
             href="#contact"
             className="hidden items-center gap-2 rounded-full bg-[#10202d] px-5 py-3 text-[12px] font-bold tracking-[0.08em] text-white transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#f47a27] hover:text-[#10202d] sm:flex"
           >
-            ขอใบเสนอราคา <ArrowUpRight size={16} />
+            ขอใบเสนอราคา <ArrowUpRight size={18} />
           </a>
 
           <button
