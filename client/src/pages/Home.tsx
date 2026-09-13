@@ -187,7 +187,7 @@ export default function Home() {
               งานที่เราดูแล
             </a>
             <a className="nav-link !text-[18px]  text-green-700 hover:text-green-500" href="#process">
-              แนวทางทำงาน
+              แนวทางการทำงาน
             </a>
             <a
               className="nav-link !text-[18px]  text-green-700 hover:text-green-500"
