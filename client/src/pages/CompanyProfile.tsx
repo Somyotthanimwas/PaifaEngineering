@@ -22,17 +22,8 @@ export default function CompanyProfile() {
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block text-[11px] font-bold tracking-[0.24em] text-[#ff9a55] transition hover:text-white hover:underline"
-            >
-               
-            className="hidden items-center gap-8 lg:flex"
-             
-          >
+            >            
             <a className="nav-link text-2xl text-green-700 hover:text-green-500" href="#about">
-               
-            
-               
- 
-
               COMPANY PROFILE
               </a>  
             </a>
