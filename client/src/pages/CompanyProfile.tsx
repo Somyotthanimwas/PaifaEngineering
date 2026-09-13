@@ -65,7 +65,7 @@ export default function CompanyProfile() {
         <section className="bg-[#f47a27] py-16 text-[#10202d]">
           <div className="container flex flex-col justify-between gap-8 md:flex-row md:items-center">
             <div><p className="text-[11px] font-bold tracking-[0.22em] text-[#10202d]/65">PLAIFA ENGINEERING</p><h2 className="mt-3 text-3xl font-bold">พร้อมคุยรายละเอียดโครงการของคุณ</h2></div>
-            <a href="/?utm_source=company-profile#contact" className="inline-flex items-center gap-2 rounded-full bg-[#10202d] px-6 py-4 text-sm font-bold text-white">ขอใบเสนอราคา <ArrowUpRight size={17} /></a>
+            <a href="https://paifaengineering.onrender.com/#contact" className="inline-flex items-center gap-2 rounded-full bg-[#10202d] px-6 py-4 text-sm font-bold text-white">ขอใบเสนอราคา <ArrowUpRight size={17} /></a>
           </div>
         </section>
       </main>
