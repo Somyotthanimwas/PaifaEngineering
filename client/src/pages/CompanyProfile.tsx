@@ -25,8 +25,8 @@ export default function CompanyProfile() {
             >           
               COMPANY PROFILE
             </a>
-            <h1 className="mt-5 max-w-4xl text-4xl font-bold leading-tight tracking-tight sm:text-6xl">บริษัท ปลายฟ้า เอ็นจิเนียริ่ง จำกัด</h1>
-            <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300">Plaifa Engineering Co.,Ltd. — Engineering partner สำหรับงานระบบไฟฟ้า งานวิศวกรรม และการสนับสนุนโครงการ</p>
+            <h1 className="mt-5 max-w-4xl text-4xl font-bold leading-tight tracking-tight sm:text-5xl">บริษัท ปลายฟ้า เอ็นจิเนียริ่ง จำกัด</h1>
+            <p className="mt-6 max-w-2xl text-xg leading-8 text-slate-300">Plaifa Engineering Co.,Ltd. — Engineering partner สำหรับงานระบบไฟฟ้า งานวิศวกรรม และการสนับสนุนโครงการ</p>
           </div>
         </section>
 
