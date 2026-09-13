@@ -23,6 +23,16 @@ export default function CompanyProfile() {
               rel="noopener noreferrer"
               className="inline-block text-[11px] font-bold tracking-[0.24em] text-[#ff9a55] transition hover:text-white hover:underline"
             >
+              <nav
+            className="hidden items-center gap-8 lg:flex"
+            aria-label="Main navigation"
+          >
+            <a className="nav-link text-2xl text-green-700 hover:text-green-500" href="#about">
+              เกี่ยวกับเรา
+            </a>
+               </nav>
+ 
+
               COMPANY PROFILE
             </a>
             <h1 className="mt-5 max-w-4xl text-4xl font-bold leading-tight tracking-tight sm:text-6xl">บริษัท ปลายฟ้า เอ็นจิเนียริ่ง จำกัด</h1>
