@@ -21,7 +21,7 @@ export default function CompanyProfile() {
               href="/docs/Company%20profile.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block text-[36px] font-bold tracking-[0.24em] text-[#ff9a55] transition hover:text-white hover:underline"
+              className="inline-block text-[11px] font-bold tracking-[0.24em] text-[#ff9a55] transition hover:text-white hover:underline"
             >           
               COMPANY PROFILE
             </a>
