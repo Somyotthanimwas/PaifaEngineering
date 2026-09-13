@@ -247,17 +247,19 @@ export default function Home() {
               className="container flex flex-col gap-4"
               aria-label="Mobile navigation"
             >
-              {["#about", "/company-profile", "#services", "#projects", "#process", "#contact"].map(
-                (href, index) => {
-                  const labels = [
-                    "เกี่ยวกับเรา",
-                    "Company Profile",
-                    "บริการ",
-                    "ผลงาน",
-                    "แนวทางทำงาน",
-                    "ขอใบเสนอราคา",
-                  ];
-
+              {[
+                { href: "#about", label: "เกี่ยวกับเรา" },
+                { href: "/company-profile", label: "Company Profile" },
+                { href: "#services", label: "บริการ" },
+                { href: "#projects", label: "งานที่เราดูแล" },
+                {
+                  href: "https://plaifaengineering.onrender.com/#projects2",
+                  label: "ผลงาน",
+                },
+                { href: "#process", label: "แนวทางการทำงาน" },
+                { href: "#contact", label: "ขอใบเสนอราคา" },
+              ].map(
+                ({ href, label }) => {
                   return (
                     <a
                       key={href}
@@ -265,7 +267,7 @@ export default function Home() {
                       onClick={closeMenu}
                       className="flex items-center justify-between border-b border-slate-200 pb-3 text-sm font-bold text-[#10202d]"
                     >
-                      {labels[index]}
+                      {label}
                       <ChevronRight
                         size={16}
                         className="text-[#f47a27]"
