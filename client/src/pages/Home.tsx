@@ -605,8 +605,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section
-          id="contact"
+        <section
           className="relative overflow-hidden bg-[#f47a27] py-24 text-[#10202d] lg:py-28"
         >
           <div className="absolute -right-24 -top-24 size-80 rounded-full border-[40px] border-[#10202d]/10" />
@@ -653,8 +652,9 @@ export default function Home() {
             </div>
 
             <form
+              id="contact"
               onSubmit={handleSubmit}
-              className="rounded-[24px] border border-[#10202d]/12 bg-white/90 p-6 shadow-[0_20px_50px_rgba(16,32,45,0.12)] backdrop-blur sm:p-8"
+              className="scroll-mt-[76px] rounded-[24px] border border-[#10202d]/12 bg-white/90 p-6 shadow-[0_20px_50px_rgba(16,32,45,0.12)] backdrop-blur sm:p-8"
             >
               <div className="mb-7 flex items-center justify-between">
                 <div>
