@@ -190,7 +190,7 @@ export default function Home() {
               แนวทางการทำงาน
             </a>
             <a
-              className="nav-link !text-[18px]  text-blue-700 hover:text-orange-500"
+              className="nav-link !text-[18px]  text-blue-700 hover:text-green-500"
               href="https://plaifaengineering.onrender.com/#projects2"
               target="_blank"
               rel="noreferrer"
