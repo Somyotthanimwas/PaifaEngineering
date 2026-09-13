@@ -17,16 +17,18 @@ export default function CompanyProfile() {
       <main>
         <section className="bg-[#10202d] py-20 text-white lg:py-28">
           <div className="container">
+            <p className="text-[11px] font-bold tracking-[0.22em] text-[#ff9a55]">COMPANY PROFILE</p>
+            <h1 className="mt-5 max-w-4xl text-4xl font-bold leading-tight tracking-tight sm:text-5xl">บริษัท ปลายฟ้า เอ็นจิเนียริ่ง จำกัด</h1>
+            <p className="mt-6 max-w-2xl text-xl leading-8 text-slate-300">Plaifa Engineering Co.,Ltd. — Engineering partner สำหรับงานระบบไฟฟ้า งานวิศวกรรม และการสนับสนุนโครงการ</p>
             <a
               href="/docs/Company%20profile.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block !text-[32px] font-bold tracking-[0.24em] text-[#ff9a55] transition hover:text-white hover:underline"
-            >           
-              COMPANY PROFILE
+              className="mt-9 inline-flex items-center gap-3 rounded-full bg-[#f47a27] px-7 py-4 text-sm font-bold text-[#10202d] shadow-[0_14px_30px_rgba(244,122,39,0.24)] transition hover:-translate-y-1 hover:bg-[#ff964e]"
+            >
+              เปิด Company Profile <ArrowUpRight size={18} />
             </a>
-            <h1 className="mt-5 max-w-4xl text-4xl font-bold leading-tight tracking-tight sm:text-5xl">บริษัท ปลายฟ้า เอ็นจิเนียริ่ง จำกัด</h1>
-            <p className="mt-6 max-w-2xl text-xl leading-8 text-slate-300">Plaifa Engineering Co.,Ltd. — Engineering partner สำหรับงานระบบไฟฟ้า งานวิศวกรรม และการสนับสนุนโครงการ</p>
+            <p className="mt-3 text-sm text-slate-400">ดูข้อมูลบริษัทและรายละเอียดบริการในเอกสาร PDF</p>
           </div>
         </section>
 
