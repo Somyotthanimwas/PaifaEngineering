@@ -135,9 +135,28 @@ export default function Home() {
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
+
+    const scrollToContact = () => {
+      if (window.location.hash !== "#contact") return;
+
+      window.requestAnimationFrame(() => {
+        document.getElementById("contact")?.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      });
+    };
+
     window.addEventListener("scroll", onScroll);
+    window.addEventListener("hashchange", scrollToContact);
+
     onScroll();
-    return () => window.removeEventListener("scroll", onScroll);
+    scrollToContact();
+
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("hashchange", scrollToContact);
+    };
   }, []);
 
   const closeMenu = () => setMobileOpen(false);
