@@ -199,6 +199,12 @@ export default function Home() {
             <a className="nav-link !text-[18px] text-green-700 hover:text-green-500" href="#about">
               เกี่ยวกับเรา
             </a>
+            <a
+              className="nav-link !text-[18px] text-green-700 hover:text-green-500"
+              href="/company-profile"
+            >
+              Company Profile
+            </a>
             <a className="nav-link !text-[18px]  text-green-700 hover:text-green-500" href="#services">
               บริการ
             </a>
@@ -241,10 +247,11 @@ export default function Home() {
               className="container flex flex-col gap-4"
               aria-label="Mobile navigation"
             >
-              {["#about", "#services", "#projects", "#process", "#contact"].map(
+              {["#about", "/company-profile", "#services", "#projects", "#process", "#contact"].map(
                 (href, index) => {
                   const labels = [
                     "เกี่ยวกับเรา",
+                    "Company Profile",
                     "บริการ",
                     "ผลงาน",
                     "แนวทางทำงาน",
