@@ -17,7 +17,7 @@ export default function CompanyProfile() {
       <main>
         <section className="bg-[#10202d] py-20 text-white lg:py-28">
           <div className="container">
-            <p className="text-[11px] font-bold tracking-[0.22em] text-[#ff9a55]">COMPANY PROFILE</p>
+            <p className="text-3xl font-bold tracking-[0.12em] text-[#ff9a55] sm:text-4xl">COMPANY PROFILE</p>
             <h1 className="mt-5 max-w-4xl text-4xl font-bold leading-tight tracking-tight sm:text-5xl">บริษัท ปลายฟ้า เอ็นจิเนียริ่ง จำกัด</h1>
             <p className="mt-6 max-w-2xl text-xl leading-8 text-slate-300">Plaifa Engineering Co.,Ltd. — Engineering partner สำหรับงานระบบไฟฟ้า งานวิศวกรรม และการสนับสนุนโครงการ</p>
             <a
