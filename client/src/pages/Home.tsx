@@ -299,7 +299,7 @@ export default function Home() {
                 ELECTRICAL • ENGINEERING • PROJECT
               </div>
 
-              <h1 className="display max-w-[760px] text-[clamp(1.4rem,3.5vw,3.25rem)] font-bold leading-[0.98] tracking-[-0.05em]">
+              <h1 className="display max-w-[760px] text-[clamp(1.4rem,3.5vw,3rem)] font-bold leading-[0.98] tracking-[-0.05em]">
                 ระบบที่ดี
                 <br />
                 <span className="text-[#f47a27]">เริ่มจาก</span>ความเข้าใจ
@@ -633,7 +633,8 @@ export default function Home() {
           </div>
         </section>
 
-        <section
+        <section
+
           className="relative overflow-hidden bg-[#f47a27] py-24 text-[#10202d] lg:py-28"
         >
           <div className="absolute -right-24 -top-24 size-80 rounded-full border-[40px] border-[#10202d]/10" />
