@@ -19,9 +19,15 @@ function ContactFormEmailBridge() {
       const data = new FormData(form);
       const company = String(data.get("company") || "").trim();
       const name = String(data.get("name") || "").trim();
+      const email = String(data.get("email") || "").trim();
       const details = String(data.get("details") || "").trim();
+      const submittedAtThailand = new Intl.DateTimeFormat("th-TH", {
+        dateStyle: "medium",
+        timeStyle: "short",
+        timeZone: "Asia/Bangkok",
+      }).format(new Date());
 
-      if (!company || !name || !details) return;
+      if (!company || !name || !email || !details) return;
 
       try {
         const response = await fetch("https://formsubmit.co/ajax/plaifaeng@hotmail.com", {
@@ -32,9 +38,12 @@ function ContactFormEmailBridge() {
           },
           body: JSON.stringify({
             _subject: `งานใหม่จากเว็บไซต์ Plaifa Engineering - ${company}`,
+            _replyto: email,
             company,
             name,
+            email,
             details,
+            submitted_at_thailand: `${submittedAtThailand} น. (เวลาไทย)`,
             _url: window.location.href,
           }),
         });

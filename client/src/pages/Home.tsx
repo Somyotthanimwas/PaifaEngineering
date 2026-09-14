@@ -740,6 +740,17 @@ export default function Home() {
                         className="field-input"
                       />
                     </label>
+
+                    <label className="field-label sm:col-span-2">
+                      อีเมลสำหรับติดต่อกลับ
+                      <input
+                        required
+                        type="email"
+                        name="email"
+                        placeholder="name@company.com"
+                        className="field-input"
+                      />
+                    </label>
                   </div>
 
                   <label className="field-label mt-4 block">
