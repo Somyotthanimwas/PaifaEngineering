@@ -762,6 +762,49 @@ export default function Home() {
                 </>
               )}
             </form>
+
+            <div className="overflow-hidden rounded-[24px] border border-[#10202d]/12 bg-white/90 shadow-[0_20px_50px_rgba(16,32,45,0.12)] backdrop-blur lg:col-span-2">
+              <div className="grid lg:grid-cols-[0.8fr_1.2fr]">
+                <div className="flex flex-col justify-center p-6 sm:p-8">
+                  <div className="flex items-center gap-3">
+                    <span className="grid size-11 place-items-center rounded-full bg-[#10202d] text-[#f47a27]">
+                      <MapPin size={18} />
+                    </span>
+                    <div>
+                      <p className="text-lg font-bold">แผนที่บริษัท</p>
+                      <p className="mt-1 text-xs text-[#68757d]">
+                        Plaifa Engineering Co., Ltd.
+                      </p>
+                    </div>
+                  </div>
+
+                  <p className="mt-6 text-sm leading-7 text-[#68757d]">
+                    153/49 Inizio 2 ตำบลศาลากลาง อำเภอบางกรวย
+                    <br />
+                    จังหวัดนนทบุรี 11130
+                  </p>
+
+                  <a
+                    href="https://www.google.com/maps/search/?api=1&query=บริษัท%20ปลายฟ้า%20เอ็นจิเนียริ่ง%20จำกัด"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="mt-6 inline-flex w-fit items-center gap-2 rounded-full bg-[#10202d] px-5 py-3 text-xs font-bold text-white transition-colors hover:bg-[#f47a27] hover:text-[#10202d]"
+                  >
+                    เปิดเส้นทางใน Google Maps <ArrowUpRight size={16} />
+                  </a>
+                </div>
+
+                <div className="min-h-[300px] bg-[#dfe5e7] lg:min-h-[360px]">
+                  <iframe
+                    title="แผนที่บริษัท ปลายฟ้า เอ็นจิเนียริ่ง จำกัด"
+                    src="https://www.google.com/maps?q=บริษัท%20ปลายฟ้า%20เอ็นจิเนียริ่ง%20จำกัด&output=embed"
+                    className="h-full min-h-[300px] w-full border-0 lg:min-h-[360px]"
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                  />
+                </div>
+              </div>
+            </div>
           </div>
         </section>
       </main>
