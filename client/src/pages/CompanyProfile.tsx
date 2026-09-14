@@ -39,7 +39,7 @@ export default function CompanyProfile() {
             </div>
             <div>
               <p className="text-[11px] font-bold tracking-[0.22em] text-[#f47a27]">ABOUT US</p>
-              <h2 className="mt-4 text-3xl font-bold sm:text-5xl">ทำงานด้วยความเข้าใจ เพื่อให้ระบบทำงานได้จริง</h2>
+              <h2 className="mt-4 text-3xl font-bold sm:text-4xl">ทำงานด้วยความเข้าใจ เพื่อให้ระบบทำงานได้จริง</h2>
               <p className="mt-7 text-[16px] leading-8 text-[#5f6d76]">Plaifa Engineering ให้บริการงานระบบไฟฟ้าและงานวิศวกรรม โดยให้ความสำคัญกับการเข้าใจโจทย์ของลูกค้า การวางแผนงานอย่างเป็นระบบ คุณภาพ ความปลอดภัย และการส่งมอบงานตามขอบเขตที่ตกลงกัน</p>
               <div className="mt-9 grid gap-4 sm:grid-cols-2">
                 {["วางแผนและประเมินหน้างาน", "ติดตั้งระบบไฟฟ้า", "ควบคุมคุณภาพและความปลอดภัย", "ตรวจสอบและสนับสนุนหลังงาน"].map((item) => (
@@ -54,7 +54,7 @@ export default function CompanyProfile() {
           <div className="container">
             <div className="max-w-3xl">
               <p className="text-[11px] font-bold tracking-[0.22em] text-[#f47a27]">OUR APPROACH</p>
-              <h2 className="mt-4 text-3xl font-bold sm:text-5xl">จากโจทย์หน้างาน สู่ผลลัพธ์ที่ชัดเจน</h2>
+              <h2 className="mt-4 text-3xl font-bold sm:text-4xl">จากโจทย์หน้างาน สู่ผลลัพธ์ที่ชัดเจน</h2>
             </div>
             <div className="mt-12 grid gap-5 md:grid-cols-3">
               {[["01", "เข้าใจงาน", "รับโจทย์และประเมินเงื่อนไขของโครงการก่อนเริ่มงาน"], ["02", "วางระบบ", "วางแผน ประสานงาน และจัดลำดับการทำงานให้เหมาะสม"], ["03", "ส่งมอบ", "ตรวจสอบรายละเอียดและส่งมอบงานด้วยความรับผิดชอบ"]].map(([no, title, text]) => (
