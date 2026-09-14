@@ -693,7 +693,6 @@ export default function Home() {
                   </p>
                 </div>
 
-                <Sparkles size={22} className="text-[#f47a27]" />
               </div>
 
               {submitted ? (
