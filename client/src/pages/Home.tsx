@@ -682,6 +682,8 @@ export default function Home() {
 
             <form
               id="contact"
+              method="POST"
+              action="https://formsubmit.co/ajax/plaifaeng@hotmail.com"
               onSubmit={handleSubmit}
               className="scroll-mt-[76px] rounded-[24px] border border-[#10202d]/12 bg-white/90 p-6 shadow-[0_20px_50px_rgba(16,32,45,0.12)] backdrop-blur sm:p-8"
             >
