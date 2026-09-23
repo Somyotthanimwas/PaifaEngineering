@@ -447,7 +447,7 @@ export default function Home() {
                   </div>
                 ))}
               </div>
-
+              
               <a
                 href="#contact"
                 className="mt-11 inline-flex items-center gap-2 text-sm font-bold text-[#10202d] underline decoration-[#f47a27] decoration-2 underline-offset-8 transition-colors hover:text-[#f47a27]"
