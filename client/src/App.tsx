@@ -10,6 +10,59 @@ import Home from "./pages/Home";
 import Projects from "./pages/Projects";
 import Projects2 from "./pages/Projects2";
 
+function ContactFormEmailBridge() {
+  useEffect(() => {
+    const handleSubmit = async (event: Event) => {
+      const form = event.target as HTMLFormElement | null;
+      if (!form || !form.querySelector('input[name="company"]')) return;
+
+      const data = new FormData(form);
+      const company = String(data.get("company") || "").trim();
+      const name = String(data.get("name") || "").trim();
+      const email = String(data.get("email") || "").trim();
+      const details = String(data.get("details") || "").trim();
+      const submittedAtThailand = new Intl.DateTimeFormat("th-TH", {
+        dateStyle: "medium",
+        timeStyle: "short",
+        timeZone: "Asia/Bangkok",
+      }).format(new Date());
+
+      if (!company || !name || !email || !details) return;
+
+      try {
+        const response = await fetch("https://formsubmit.co/ajax/plaifaeng@hotmail.com", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify({
+            _subject: `งานใหม่จากเว็บไซต์ Plaifa Engineering - ${company}`,
+            _replyto: email,
+            company,
+            name,
+            email,
+            details,
+            submitted_at_thailand: `${submittedAtThailand} น. (เวลาไทย)`,
+            _url: window.location.href,
+          }),
+        });
+
+        if (!response.ok) {
+          console.error("Contact form email failed:", response.status);
+        }
+      } catch (error) {
+        console.error("Contact form email error:", error);
+      }
+    };
+
+    document.addEventListener("submit", handleSubmit, true);
+    return () => document.removeEventListener("submit", handleSubmit, true);
+  }, []);
+
+  return null;
+}
+
 function HashAwareHome() {
   const [showProjects2, setShowProjects2] = useState(
     () => window.location.hash === "#projects2"
@@ -46,6 +99,7 @@ function App() {
       <ThemeProvider defaultTheme="light">
         <TooltipProvider>
           <Toaster />
+          <ContactFormEmailBridge />
           <Router />
         </TooltipProvider>
       </ThemeProvider>
