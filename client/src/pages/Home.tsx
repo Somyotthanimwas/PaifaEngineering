@@ -161,9 +161,20 @@ export default function Home() {
 
   const closeMenu = () => setMobileOpen(false);
 
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    const form = event.currentTarget;
+    const response = await fetch("https://formsubmit.co/ajax/plaifaeng@hotmail.com", {
+      method: "POST",
+      headers: { "Content-Type": "application/json", Accept: "application/json" },
+      body: JSON.stringify(Object.fromEntries(new FormData(form))),
+    });
+    if (!response.ok) {
+      console.error("Contact form email failed:", response.status);
+      return;
+    }
     setSubmitted(true);
+    form.reset();
   };
 
   return (
