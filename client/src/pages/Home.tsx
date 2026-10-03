@@ -299,15 +299,17 @@ export default function Home() {
                 ELECTRICAL • ENGINEERING • PROJECT
               </div>
 
-              <h1 className="display max-w-[760px] text-[clamp(1.4rem,3.5vw,2.5rem)] font-bold leading-[0.98] tracking-[-0.05em]">
-                ระบบที่ดี
+              <h1 className="display max-w-[760px] text-[clamp(1.8rem,4vw,3rem)] font-bold leading-[1.08] tracking-[-0.04em]">
+                รับออกแบบและติดตั้งระบบไฟฟ้า
                 <br />
-                <span className="text-[#f47a27]">เริ่มจาก</span>ความเข้าใจ
+                <span className="text-[#f47a27]">พร้อมติดตั้งหม้อแปลงไฟฟ้า</span>
               </h1>
 
-              <p className="mt-8 max-w-[580px] text-[17px] leading-8 text-slate-200/82 sm:text-[19px]">
-                Plaifa Engineering คือ Engineering partner สำหรับงานระบบไฟฟ้า
-                งานวิศวกรรม และการสนับสนุนโครงการ ตั้งแต่การวางแผนจนถึงส่งมอบงาน
+              <p className="mt-8 max-w-[650px] text-[17px] leading-8 text-slate-200/82 sm:text-[19px]">
+                Plaifa Engineering Co.,Ltd. ให้บริการออกแบบและติดตั้งระบบไฟฟ้า
+                ติดตั้งหม้อแปลงไฟฟ้า MDB ระบบไฟฟ้าโรงงาน และงานวิศวกรรมไฟฟ้า
+                สำหรับโรงงาน อาคาร และโครงการต่าง ๆ ตั้งแต่สำรวจหน้างาน ออกแบบ
+                ติดตั้ง ตรวจสอบ จนถึงส่งมอบงาน
               </p>
 
               <div className="mt-10 flex flex-col gap-3 sm:flex-row">
