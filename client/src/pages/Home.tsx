@@ -173,7 +173,7 @@ export default function Home() {
       <header
         className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
           scrolled
-            ? "border-b border-slate-200/80 bg-[#f3f5f6]/92 shadow-[0_12px_40px_rgba(15,31,45,0.08)] backdrop-blur-xl"
+            ? "border-b border-slate-200/80 bg-[#000000]/90 shadow-[0_12px_40px_rgba(15,31,45,0.08)] backdrop-blur-xl"
             : "bg-transparent"
         }`}
       >
