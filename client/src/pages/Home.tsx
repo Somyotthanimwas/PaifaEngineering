@@ -300,9 +300,9 @@ export default function Home() {
               </div>
 
               <h1 className="display max-w-[760px] text-[clamp(1.8rem,4vw,3rem)] font-bold leading-[1.08] tracking-[-0.04em]">
-                รับออกแบบและติดตั้งระบบไฟฟ้า
+                รับออกแบบงานระบบไฟฟ้าและสือสาร
                 <br />
-                <span className="text-[#f47a27]">พร้อมติดตั้งหม้อแปลงไฟฟ้า</span>
+                <span className="text-[#f47a27]">พร้อมติดตั้งและตรวจสอบทั้งระบบ</span>
               </h1>
 
               <p className="mt-8 max-w-[650px] text-[17px] leading-8 text-slate-200/82 sm:text-[19px]">
