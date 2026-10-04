@@ -192,39 +192,54 @@ export default function Home() {
             />
           </a>
 
-          <nav
-            className="hidden items-center gap-8 lg:flex"
-            aria-label="Main navigation"
-          >
-            <a className="nav-link !text-[18px] text-white-900 hover:text-green-500" href="#about">
-              เกี่ยวกับเรา
-            </a>
-            <a
-              className="nav-link !text-[18px] text-green-700 hover:text-green-500"
-              href="/company-profile"
-            >
-              Company Profile
-            </a>
-            <a className="nav-link !text-[18px]  text-green-700 hover:text-green-500" href="#services">
-              บริการ
-            </a>
-            <a className="nav-link !text-[18px]  text-green-700 hover:text-green-500" href="#projects">
-              งานที่เราดูแล
-            </a>
-            <a className="nav-link !text-[18px]  text-green-700 hover:text-green-500" href="#process">
-              แนวทางการทำงาน
-            </a>
-            <a
-              className="nav-link !text-[18px]  text-green-700 hover:text-green-500"
-              href="https://plaifaengineering.onrender.com/#projects2"
-              target="_blank"
-              rel="noreferrer"
-            >
-              ผลงาน
-            </a>
+        <nav
+  className="hidden items-center gap-8 lg:flex"
+  aria-label="Main navigation"
+>
+  <a
+    className="nav-link !text-[20px] !text-white hover:!text-green-400"
+    href="#about"
+  >
+    เกี่ยวกับเรา
+  </a>
 
-          </nav>
+  <a
+    className="nav-link !text-[20px] !text-white hover:!text-green-400"
+    href="/company-profile"
+  >
+    Company Profile
+  </a>
 
+  <a
+    className="nav-link !text-[20px] !text-white hover:!text-green-400"
+    href="#services"
+  >
+    บริการ
+  </a>
+
+  <a
+    className="nav-link !text-[20px] !text-white hover:!text-green-400"
+    href="#projects"
+  >
+    งานที่เราดูแล
+  </a>
+
+  <a
+    className="nav-link !text-[20px] !text-white hover:!text-green-400"
+    href="#process"
+  >
+    แนวทางการทำงาน
+  </a>
+
+  <a
+    className="nav-link !text-[20px] !text-white hover:!text-green-400"
+    href="https://plaifaengineering.onrender.com/#projects2"
+    target="_blank"
+    rel="noreferrer"
+  >
+    ผลงาน
+  </a>
+</nav>
           <a
             href="#contact"
             className="hidden items-center gap-2 rounded-full bg-[#10202d] px-5 py-3 text-[12px] font-bold tracking-[0.08em] text-white transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#f47a27] hover:text-[#10202d] sm:flex"
