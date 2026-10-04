@@ -315,7 +315,7 @@ export default function Home() {
                 ELECTRICAL • ENGINEERING • PROJECT
               </div>
 
-              <h1 className="display max-w-[760px] text-[clamp(1.8rem,4vw,3rem)] font-bold leading-[1.08] tracking-[-0.04em]">
+              <h1 className="display max-w-[760px] text-[clamp(1.6rem,3.5vw,2.7rem)] font-bold leading-[1.08] tracking-[-0.04em]">
                 รับออกแบบงานระบบไฟฟ้าและสือสาร
                 <br />
                 <span className="text-[#f47a27]">พร้อมติดตั้งและตรวจสอบทั้งระบบ</span>
